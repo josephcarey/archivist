@@ -13,13 +13,13 @@ grouped by phase.
 
 ## Phase 2 — Ingest hardening
 
-- [ ] Ingest hashing to detect changed sources
-- [ ] `defuddle` (or similar) for clean sources — pull the full clean source in a predictable md format
-- [ ] Command to grab new versions of each git repo and compare/diff the notes
-- [ ] Handle monorepo packages gracefully (per-package notes)
-- [ ] Repo-specific folder layout
-- [ ] Apply the profile evaluation rubric during ingest
-- [ ] Add mermaid diagrams to generated pages
+- [x] Ingest hashing to detect changed sources
+- [x] `defuddle` (or similar) for clean sources — pull the full clean source in a predictable md format
+- [x] Command to grab new versions of each git repo and compare/diff the notes
+- [x] Handle monorepo packages gracefully (per-package notes)
+- [x] Repo-specific folder layout
+- [ ] Apply the profile evaluation rubric during ingest (engine convention wired in Phase 1; verify in practice)
+- [x] Add mermaid diagrams to generated pages
 
 ## Phase 3 — PR automation
 

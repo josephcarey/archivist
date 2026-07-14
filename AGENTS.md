@@ -51,11 +51,23 @@ raw/               ← user's source files (READ ONLY)
   files/           ← PDFs, text files, markdown files
   repos/           ← cloned git repositories
 
+.archivist/        ← engine state (do not hand-edit)
+  manifest.json    ← per-source content hashes for change detection (tracked)
+  cache/           ← clean cached copies of fetched sources (gitignored)
+
 scripts/           ← Node.js helpers (call these during ingest)
   extract-pdf.js   ← node scripts/extract-pdf.js <path>
-  fetch-url.js     ← node scripts/fetch-url.js <url>
-  clone-repo.js    ← node scripts/clone-repo.js <git-url>
+  fetch-url.js     ← node scripts/fetch-url.js <url>   (Defuddle extraction + fallback)
+  clone-repo.js    ← node scripts/clone-repo.js <git-url>   (detects monorepo packages)
+  status.js        ← node scripts/status.js   (report new/changed/unchanged sources)
+  refresh-repos.js ← node scripts/refresh-repos.js [repo]   (pull repos + diff changes)
+  lib/manifest.js  ← shared hashing + manifest helpers
 ```
+
+Every fetch/clone/extract script hashes its source and prints a
+`[archivist] NEW|CHANGED|UNCHANGED` banner (to stderr) so you know whether a
+re-ingest is needed. `status.js` and `refresh-repos.js` surface the same signal
+across all sources at once.
 
 ---
 
@@ -84,6 +96,10 @@ Page anatomy:
 Use `##` for all top-level sections. Never use `#` again after the title.
 
 Internal links use relative paths from `docs/`: `[Text](wiki/slug.md)`
+
+**Diagrams:** the docsify site renders Mermaid. Use a ```` ```mermaid ```` fenced block
+to add flowcharts, sequence, or entity diagrams where a visual clarifies architecture,
+data flow, or relationships.
 
 ---
 
@@ -151,7 +167,19 @@ When the user runs `/lint`:
 
 ---
 
-## Index Format (`docs/index.md`)
+### `/status` and refreshing sources
+
+Maintenance commands for keeping the wiki in sync with changing sources:
+
+- **`node scripts/status.js`** — lists every known source as `new`, `changed`,
+  `unchanged`, or `recorded`, based on content hashes in `.archivist/manifest.json`.
+  Run it to find what needs (re-)ingesting.
+- **`node scripts/refresh-repos.js [repo]`** — pulls each cloned repo, and for any
+  whose HEAD moved, prints the commit log and changed files so you can update the
+  affected wiki pages. Re-ingest the repos it flags as changed.
+
+When a source comes back `changed`, re-run the normal `/ingest` flow for it and update
+the existing pages rather than creating duplicates.
 
 The index is a catalog of every page in the wiki. Format:
 

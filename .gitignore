@@ -2,3 +2,4 @@ scripts/node_modules/
 raw/repos/*
 !raw/repos/.gitkeep
 .DS_Store
+.archivist/cache/

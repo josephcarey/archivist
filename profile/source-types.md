@@ -40,3 +40,6 @@ Notes:
 - Whichever kind, always produce/refresh at least one `concept` page so knowledge accretes on
   stable entities rather than scattering across one-off source pages.
 - Prefer updating an existing concept page over creating a duplicate.
+- Fetch/clone/extract scripts print a `[archivist] NEW|CHANGED|UNCHANGED` banner. Use
+  `node scripts/status.js` for an overview and `node scripts/refresh-repos.js` to pull repos
+  and see what changed before re-ingesting.

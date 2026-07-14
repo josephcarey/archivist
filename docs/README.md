@@ -30,6 +30,10 @@ You bring the sources. The AI does the filing.
 - [Index](index.md) — catalog of all wiki pages
 - [Log](log.md) — history of every ingest and query
 
+This instance's focus is defined in `profile/` (domain, taxonomy, evaluation rubric, and
+source types). The engine itself is domain-agnostic — rewrite the profile to point archivist
+at a different subject.
+
 ---
 
 ## Example pages

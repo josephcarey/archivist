@@ -1,28 +1,48 @@
 # Outstanding To Dos
 
-## update organization
+See `ROADMAP.md` for the vision and phased plan. This file tracks the concrete work items,
+grouped by phase.
 
-- wiki page on the top, technical docs on the bottom, log, guides on top?
+## Phase 1 — Profile seam
+
+- [x] Create `profile/` with `profile.md`, `taxonomy.md`, `rubric.md`, `source-types.md`
+- [x] Move domain-specific conventions out of `AGENTS.md` into `profile/`
+- [x] Make the engine read the profile instead of hardcoding conventions
+- [x] Author the AI-research profile content
+- [x] Slight rewrite of base files to reference the profile
+
+## Phase 2 — Ingest hardening
+
+- [ ] Ingest hashing to detect changed sources
+- [ ] `defuddle` (or similar) for clean sources — pull the full clean source in a predictable md format
+- [ ] Command to grab new versions of each git repo and compare/diff the notes
+- [ ] Handle monorepo packages gracefully (per-package notes)
+- [ ] Repo-specific folder layout
+- [ ] Apply the profile evaluation rubric during ingest
+- [ ] Add mermaid diagrams to generated pages
+
+## Phase 3 — PR automation
+
+- [ ] Host the repo on GitHub with Actions enabled (prerequisite)
+- [ ] Action to detect new/changed sources on a PR
+- [ ] Agent runner to ingest + commit wiki pages back onto the PR branch
+- [ ] Skills and agents to keep this cleaner and use the best models
+- [ ] Mirror Dan's approach to avoiding reading full skills into context unless needed
+
+## Phase 4 — Shared consumption
+
+- [ ] Rearrange sidebar (wiki pages on top, technical docs below; log/guides placement)
+- [ ] Auto-maintained digest / "Things to Watch" page
+- [ ] Publish the docsify site as the shared read surface
+- [ ] Streamlined `/query` entry point over the whole wiki
+
+## Open questions / raw notes
+
 - What makes a wiki a wiki? What am I looking for when I use it?
-- Roll a starter based on API, but it's a series of sources you pull down (environments page, mastermind-release, confluence docs, repos? services list? The guide diagram?)
-- Maybe a setup of like
-  - Research subjects (abstract -- go find sources, register those in the "sources to be read")
-  - Grab local copies of sources in cleaned up md
-  - process sources into wiki
-
-## update fetching
-
-- look at ingest hashing to look for changes
-- look at defuddle for getting clean sources
-  - pull the entire clean source down in a predictable format
--
-
-- add a command to grab new versions of each git repo and compare the notes
-- rearrange sidebar
-- repo-specific folder
-- add mermaid diagrams
-- slight rewrite of base files
-- handle monorepo packages gracefully
-- add rtk by default
-- skills and agents to make this all cleaner and to use the best models
-- Double-check the way Dan is avoiding reading full skills into context unless needed and mirror that
+- Roll a starter based on API — a series of sources you pull down (environments page,
+  release notes, confluence docs, repos, services list, guide diagrams).
+- Possible ingest pipeline shape:
+  - Research subjects (abstract — go find sources, register them in "sources to be read")
+  - Grab local copies of sources in cleaned-up md
+  - Process sources into wiki
+- Add rtk by default

@@ -13,6 +13,23 @@ You are the wiki maintainer for this archivist project. Your job is to read sour
 
 ---
 
+## Profile (domain seam)
+
+This engine is **domain-agnostic**. Everything specific to *what this instance is about*
+lives in `profile/`. Always read the profile before ingesting, querying, or linting, and
+apply it:
+
+- `profile/profile.md` — the instance's domain, purpose, and scope (what belongs / what does not)
+- `profile/taxonomy.md` — the default tags/categories to use in page frontmatter
+- `profile/rubric.md` — how to evaluate a source (adds an `## Evaluation` block to source pages)
+- `profile/source-types.md` — recognized source kinds and how each is fetched/handled
+
+Never hardcode domain specifics into this file or into `scripts/`. To re-instance archivist
+for a different domain, the profile is rewritten and `raw/` + `docs/wiki/` are cleared — the
+engine stays untouched.
+
+---
+
 ## Directory Structure
 
 ```
@@ -22,6 +39,12 @@ docs/              ← docsify root (you write everything here)
   index.md         ← catalog of all wiki pages (you maintain this)
   log.md           ← append-only operation log (you append to this)
   wiki/            ← all substantive wiki pages live here
+
+profile/           ← DOMAIN SEAM (what this instance is about — read before every op)
+  profile.md       ← domain, purpose, scope
+  taxonomy.md      ← default tags/categories
+  rubric.md        ← how to evaluate a source
+  source-types.md  ← recognized source kinds + handling
 
 raw/               ← user's source files (READ ONLY)
   urls.md          ← list of URLs to ingest
@@ -70,6 +93,8 @@ Internal links use relative paths from `docs/`: `[Text](wiki/slug.md)`
 
 When the user says `/ingest` followed by a URL, file path, or git repo URL:
 
+0. **Read the profile** (`profile/`) first — use `source-types.md` to decide how to fetch and handle this kind of source, `taxonomy.md` for tags, and `rubric.md` for evaluation.
+
 1. **Fetch the source**:
    - URL: run `node scripts/fetch-url.js <url>` → clean markdown
    - PDF: run `node scripts/extract-pdf.js <path>` → plain text
@@ -78,17 +103,19 @@ When the user says `/ingest` followed by a URL, file path, or git repo URL:
 
 2. **Read and understand** the source content.
 
-3. **Discuss** key takeaways with the user if they are present. Ask: "Here's what I found — shall I file it?"
+3. **Evaluate** the source against `profile/rubric.md` and record an `## Evaluation` block (with a signal tag) on the source page.
 
-4. **Write a summary page** to `docs/wiki/<slug>.md` using the page conventions above.
+4. **Discuss** key takeaways with the user if they are present. Ask: "Here's what I found — shall I file it?"
 
-5. **Update or create entity/concept pages** — for each key entity or concept in the source, check if a page already exists in `docs/wiki/`. If yes, add a new `## Sources` entry and update the `## Key Concepts` section. If no, create a new page.
+5. **Write a summary page** to `docs/wiki/<slug>.md` using the page conventions above. Apply tags from `profile/taxonomy.md`.
 
-6. **Update `docs/index.md`** — add a catalog entry (see Index Format below).
+6. **Update or create entity/concept pages** — for each key entity or concept in the source, check if a page already exists in `docs/wiki/`. If yes, add a new `## Sources` entry and update the `## Key Concepts` section. If no, create a new page.
 
-7. **Update `docs/_sidebar.md`** — add the new page(s) to the nav (see Sidebar Format below).
+7. **Update `docs/index.md`** — add a catalog entry (see Index Format below).
 
-8. **Append to `docs/log.md`** — one log entry (see Log Format below).
+8. **Update `docs/_sidebar.md`** — add the new page(s) to the nav (see Sidebar Format below).
+
+9. **Append to `docs/log.md`** — one log entry (see Log Format below).
 
 A single ingest may touch 5–15 wiki pages. That is normal and expected.
 
@@ -102,7 +129,7 @@ When the user asks a question:
 2. Read those pages.
 3. Synthesize a clear answer with citations linking to the relevant wiki pages.
 4. Ask: "Would you like me to file this answer as a wiki page?"
-5. If yes, write the answer as a new page in `docs/wiki/` and update index + sidebar + log.
+5. If yes, write the answer as a new page in `docs/wiki/` and update index + sidebar + log. Tag it per `profile/taxonomy.md` (page-type `analysis`).
 
 ---
 
@@ -117,6 +144,8 @@ When the user runs `/lint`:
    - **Stale claims** — places where newer sources contradict older pages (flag, don't auto-fix)
    - **Missing pages** — concepts mentioned in multiple pages but lacking their own page
    - **Frontmatter gaps** — pages missing required frontmatter fields
+   - **Taxonomy drift** — tags not in `profile/taxonomy.md`, or pages missing a category/page-type tag
+   - **Missing evaluations** — source pages without an `## Evaluation` block per `profile/rubric.md`
 3. Produce a lint report and ask the user which issues to fix.
 4. Append a lint entry to `docs/log.md`.
 

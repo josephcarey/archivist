@@ -165,11 +165,19 @@ refresh/diff, monorepo package detection, Mermaid rendering.
 - Keep local `serve` as the preview mode of the same publisher.
 
 ### Phase 6 — Automated ingestion
-- **PR auto-ingest**: a GitHub Action runs the ingest stage when a PR adds/changes a source,
-  commits the generated pages back onto the PR branch for review. (The headline "drop a link
-  in a PR → it folds into the wiki" experience. Repo is now hosted, so this is unblocked.)
-- **Scheduled AI-article feed**: a scheduled source adapter that ingests the article feed and
-  writes summarized pages (optionally opening a PR for review).
+- **PR ingest-check** *(done)*: a GitHub Action detects new/changed sources on a PR and comments
+  a "sources needing ingest" report (`.github/workflows/ingest.yml` + `scripts/report.js`). This
+  is the deterministic half — it flags *what* changed.
+- **Authoring model** *(decided: local/human for now)*: the ingest-check flags changes; a human
+  runs `/ingest` in the CLI and pushes the generated pages. Zero new CI infra/cost — fits the
+  budget-grind lens.
+- **[Soon] CI page-authoring via GitHub Copilot coding agent**: trigger the coding agent on a
+  PR to author + commit wiki pages from flagged sources (uses the Copilot subscription; no
+  separate API key). This is the headline "drop a link in a PR → it folds into the wiki"
+  experience, deferred until we wire the agent up.
+- **Scheduled AI-article feed** *(future)*: a scheduled source adapter that ingests the article
+  feed and writes summarized pages (optionally opening a PR). Revisit alongside the Copilot-agent
+  authoring step (needs a feed source + summarization-depth decision).
 
 ### Phase 7 — MCP publisher (later)
 - An MCP server exposing `search` / `get_page` / `list_watchlist` over the digest, so local

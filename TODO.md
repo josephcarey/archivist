@@ -49,8 +49,9 @@ grouped by phase.
 ## Phase 6 — Automated ingestion
 
 - [x] PR ingest-check: Action detects new/changed sources on a PR and comments a report (`.github/workflows/ingest.yml` + `scripts/report.js`)
-- [ ] **Agent runner to author + commit wiki pages back onto the PR branch — needs product input** (which runner/model, secrets, cost controls)
-- [ ] Scheduled AI-article feed adapter (ingest + summarize) — needs feed source + summarization depth decision
+- [x] **Authoring model decided: local/human `/ingest` for now** — the ingest-check flags what changed; a human runs `/ingest` in the CLI and pushes the pages. Zero new CI infra/cost (fits budget-grind).
+- [ ] **[Soon] CI page-authoring via GitHub Copilot coding agent** — trigger it on PRs to author + commit wiki pages from flagged sources (uses Copilot subscription; no separate API key). Roadmapped, not yet built.
+- [ ] Scheduled AI-article feed adapter (ingest + summarize) — needs feed source + summarization depth decision (revisit alongside the Copilot-agent authoring step)
 - [ ] archivist-specific skills/agents (ingest agent, lint agent, PR-ingest persona)
 
 ## Phase 7 — MCP publisher (later)

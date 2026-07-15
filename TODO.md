@@ -3,6 +3,22 @@
 See `ROADMAP.md` for the vision and phased plan. This file tracks the concrete work items,
 grouped by phase.
 
+## Repo setup (one-time human steps)
+
+These are GitHub-side settings the automation depends on. Do them once on the hosted repo:
+
+- [ ] **Enable GitHub Pages** — Settings → Pages → Source: **GitHub Actions**. Lets
+  `.github/workflows/pages.yml` deploy the site.
+- [ ] **Allow Actions to open PRs** — Settings → Actions → General → Workflow permissions →
+  check **"Allow GitHub Actions to create and approve pull requests."** Required for the
+  scheduled feed (`feed.yml`) to open its `feed/discovery` PR.
+- [ ] **Firewall allowlist for fetching** — the Copilot coding agent (and CI feed/ingest fetches)
+  run behind a network firewall. To let it fetch external URLs / clone remote repos, add the
+  domains to Settings → Copilot → coding agent (firewall allowlist), **or** commit the source
+  under `raw/files/` so it can be read offline. Files already in `raw/` need no network access.
+- [ ] **Assign ingest work to Copilot** — to author pages in CI, open an *Ingest a source* issue
+  (or a `raw/**` PR) and assign it to **Copilot**. (Ongoing, not one-time, but same setup family.)
+
 ## Phase 1 — Profile seam ✅
 
 - [x] Create `profile/` with `profile.md`, `taxonomy.md`, `rubric.md`, `source-types.md`
@@ -44,7 +60,7 @@ grouped by phase.
 - [x] Docsify reframed as a publisher extension (`extensions/publishers/docsify`)
 - [x] GitHub Pages deploy workflow (`.github/workflows/pages.yml`) — builds derived artifacts then deploys `docs/`
 - [x] Keep local `serve` as the preview mode of the same publisher (`./start.sh` / `publish docsify serve`)
-- [ ] One-time: enable Pages (Settings → Pages → Source: GitHub Actions) — human step
+- [ ] One-time: enable Pages (Settings → Pages → Source: GitHub Actions) — see **Repo setup** above
 
 ## Phase 6 — Automated ingestion
 

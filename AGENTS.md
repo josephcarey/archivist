@@ -322,6 +322,11 @@ token-spending part (authoring), which stays a gated `/ingest` step.
 To turn a queued candidate into pages, run the normal `/ingest` flow (locally or by assigning
 the discovery PR to Copilot).
 
+> **Setup:** `feed.yml` opens a PR, so enable *Settings → Actions → General → Workflow
+> permissions → "Allow GitHub Actions to create and approve pull requests."* Feed fetching in
+> CI is subject to the same firewall allowlist as URL ingestion (see the note above). See the
+> **Repo setup** checklist in `TODO.md` for all one-time steps.
+
 The index is a catalog of every page in the wiki. Format:
 
 ```markdown

@@ -3,6 +3,11 @@ name: Archivist feed discovery
 # Weekly discovery: poll the feeds in profile/feeds.md, append new candidate URLs to the
 # ingest queue (raw/urls.md), and open/update a PR. Discovery only — authoring the pages
 # stays a separate /ingest step (assign the PR to Copilot, or run /ingest locally).
+#
+# Setup: this workflow opens a PR, so enable
+#   Settings → Actions → General → Workflow permissions →
+#   "Allow GitHub Actions to create and approve pull requests".
+# Feed fetching is also subject to the Copilot firewall allowlist (see AGENTS.md).
 
 on:
   schedule:

@@ -1,0 +1,7 @@
+{
+  "name": "pdf",
+  "kind": "source",
+  "entry": "index.js",
+  "description": "Extract text from a local PDF file.",
+  "enabled": true
+}

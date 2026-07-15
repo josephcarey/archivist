@@ -21,9 +21,13 @@ prefer an existing one first.
 - `technique` — a method or approach (e.g. RAG, distillation, RLHF)
 - `dataset` — datasets and data pipelines
 
-## Signal tags (how to treat it)
+## Signal tags (how to treat it — lens-derived, not neutral facts)
 
-- `watch` — something to keep an eye on; feeds the "Things to Watch" digest
+These express a **values judgment**, so they are assigned through `profile/lens.md` at build
+time (by the interpretation builder), not hand-written during ingest. They live in the generated
+watchlist. See `rubric.md` (facts) vs `lens.md` (values).
+
+- `watch` — something to keep an eye on; feeds the watchlist / "Things to Watch" digest
 - `adopt` — worth adopting / already recommended
 - `trial` — worth a limited experiment
 - `hold` — not now; noted for context
@@ -39,4 +43,5 @@ prefer an existing one first.
 
 Notes:
 - Every page should carry at least one **category tag** and one **page-type tag**.
-- Apply a **signal tag** whenever a judgment has been formed (see `rubric.md`).
+- Apply a **signal tag** only as a lens-derived judgment (see `lens.md` / the interpretation
+  builder), not as a neutral ingest fact.

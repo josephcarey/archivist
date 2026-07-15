@@ -21,12 +21,48 @@ apply it:
 
 - `profile/profile.md` — the instance's domain, purpose, and scope (what belongs / what does not)
 - `profile/taxonomy.md` — the default tags/categories to use in page frontmatter
-- `profile/rubric.md` — how to evaluate a source (adds an `## Evaluation` block to source pages)
+- `profile/rubric.md` — how to evaluate a source: **neutral fact dimensions** recorded at ingest
+- `profile/lens.md` — the **values/stance** through which facts become judgments at build time
 - `profile/source-types.md` — recognized source kinds and how each is fetched/handled
+
+**Facts vs. values (important).** Ingest captures **neutral facts** — what a source objectively
+says, plus the neutral dimension scores from `rubric.md`. It must *not* decide adopt/trial/watch.
+Those **signals are a values judgment**, derived later at build time through `profile/lens.md`.
+Keeping facts neutral means the wiki can be re-judged under a changed lens without re-ingesting.
+See "Facts, values, judgments" in `ROADMAP.md`.
 
 Never hardcode domain specifics into this file or into `scripts/`. To re-instance archivist
 for a different domain, the profile is rewritten and `raw/` + `docs/wiki/` are cleared — the
 engine stays untouched.
+
+---
+
+## Pipeline & extensions
+
+The engine is a thin **ingest → build → publish** pipeline. Capabilities plug in as
+**extensions** under `extensions/`, discovered automatically (drop a folder in; no engine
+change). Each extension is a folder with an `extension.json` manifest (`name`, `kind`, `entry`,
+`enabled`) and an entry module. There are three kinds, one per stage:
+
+- **Source adapters** (`ingest`) — fetch + normalize one kind of source into markdown facts.
+  `extensions/sources/{url,repo,pdf}` wrap the shared libs in `scripts/lib/`.
+- **Builders** (`build`) — read the wiki facts × `profile/lens.md` and derive artifacts
+  (watchlist, research directions, digest). Builders **never mutate facts**. *(Phase 4)*
+- **Publishers** (`publish`) — expose built artifacts on a surface (docsify site, later MCP).
+
+Run the pipeline via `scripts/pipeline.js`:
+
+```
+node scripts/pipeline.js ingest <url|path|git-url>   # facts → clean markdown on stdout
+node scripts/pipeline.js build                       # run enabled builders
+node scripts/pipeline.js publish [name]              # run enabled publishers
+node scripts/pipeline.js list                        # list discovered extensions
+```
+
+`ingest` auto-selects the matching source adapter, so you no longer need to choose a script by
+hand. The individual `scripts/fetch-url.js` / `clone-repo.js` / `extract-pdf.js` still work as
+thin wrappers over the same libs. **Pipeline contract: `ingest` = neutral facts only;
+interpretation/judgment happens in `build` through the lens.**
 
 ---
 
@@ -43,8 +79,14 @@ docs/              ← docsify root (you write everything here)
 profile/           ← DOMAIN SEAM (what this instance is about — read before every op)
   profile.md       ← domain, purpose, scope
   taxonomy.md      ← default tags/categories
-  rubric.md        ← how to evaluate a source
+  rubric.md        ← neutral fact dimensions to score at ingest
+  lens.md          ← values/stance; drives judgments at build time
   source-types.md  ← recognized source kinds + handling
+
+extensions/        ← PLUGGABLE CAPABILITIES (discovered by kind; additive)
+  sources/         ← source adapters (ingest): url, repo, pdf
+  builders/        ← builders (build) — Phase 4
+  publishers/      ← publishers (publish) — Phase 5+
 
 raw/               ← user's source files (READ ONLY)
   urls.md          ← list of URLs to ingest
@@ -55,13 +97,19 @@ raw/               ← user's source files (READ ONLY)
   manifest.json    ← per-source content hashes for change detection (tracked)
   cache/           ← clean cached copies of fetched sources (gitignored)
 
-scripts/           ← Node.js helpers (call these during ingest)
-  extract-pdf.js   ← node scripts/extract-pdf.js <path>
-  fetch-url.js     ← node scripts/fetch-url.js <url>   (Defuddle extraction + fallback)
-  clone-repo.js    ← node scripts/clone-repo.js <git-url>   (detects monorepo packages)
-  status.js        ← node scripts/status.js   (report new/changed/unchanged sources)
-  refresh-repos.js ← node scripts/refresh-repos.js [repo]   (pull repos + diff changes)
-  lib/manifest.js  ← shared hashing + manifest helpers
+scripts/           ← engine code (Node.js)
+  pipeline.js      ← stage runner: ingest | build | publish | list
+  fetch-url.js     ← thin wrapper (Defuddle extraction + fallback)
+  clone-repo.js    ← thin wrapper (detects monorepo packages)
+  extract-pdf.js   ← thin wrapper
+  status.js        ← report new/changed/unchanged sources
+  refresh-repos.js ← pull repos + diff changes
+  lib/             ← shared engine libs
+    manifest.js    ← hashing + manifest helpers
+    extensions.js  ← extension discovery/loading
+    fetch.js       ← core URL fetch/extraction
+    clone.js       ← core repo clone/summary
+    extract.js     ← core PDF extraction
 ```
 
 Every fetch/clone/extract script hashes its source and prints a
@@ -111,15 +159,16 @@ When the user says `/ingest` followed by a URL, file path, or git repo URL:
 
 0. **Read the profile** (`profile/`) first — use `source-types.md` to decide how to fetch and handle this kind of source, `taxonomy.md` for tags, and `rubric.md` for evaluation.
 
-1. **Fetch the source**:
-   - URL: run `node scripts/fetch-url.js <url>` → clean markdown
-   - PDF: run `node scripts/extract-pdf.js <path>` → plain text
-   - Text/markdown file: read directly
-   - Git repo: run `node scripts/clone-repo.js <git-url>` → clones to `raw/repos/`, returns file tree + README
+1. **Fetch the source** — run the pipeline, which auto-selects the matching source adapter:
+   - `node scripts/pipeline.js ingest <url|filepath|git-url>` → clean markdown on stdout
+   - Text/markdown files can also be read directly.
+   - (The individual `fetch-url.js` / `clone-repo.js` / `extract-pdf.js` wrappers still work.)
 
 2. **Read and understand** the source content.
 
-3. **Evaluate** the source against `profile/rubric.md` and record an `## Evaluation` block (with a signal tag) on the source page.
+3. **Evaluate** the source against `profile/rubric.md` and record an `## Evaluation` block of
+   **neutral fact scores** on the source page. Do **not** hand-write an adopt/trial/watch signal
+   — that judgment is derived later at build time through `profile/lens.md`.
 
 4. **Discuss** key takeaways with the user if they are present. Ask: "Here's what I found — shall I file it?"
 

@@ -1,0 +1,7 @@
+{
+  "name": "repo",
+  "kind": "source",
+  "entry": "index.js",
+  "description": "Clone a git repository and summarize its structure, packages, and README.",
+  "enabled": true
+}

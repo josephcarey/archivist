@@ -1,0 +1,7 @@
+{
+  "name": "url",
+  "kind": "source",
+  "entry": "index.js",
+  "description": "Fetch a web page and extract clean markdown (Defuddle + Turndown fallback).",
+  "enabled": true
+}

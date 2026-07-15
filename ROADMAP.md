@@ -171,10 +171,12 @@ refresh/diff, monorepo package detection, Mermaid rendering.
 - **Authoring model** *(decided: local/human for now)*: the ingest-check flags changes; a human
   runs `/ingest` in the CLI and pushes the generated pages. Zero new CI infra/cost — fits the
   budget-grind lens.
-- **[Soon] CI page-authoring via GitHub Copilot coding agent**: trigger the coding agent on a
-  PR to author + commit wiki pages from flagged sources (uses the Copilot subscription; no
-  separate API key). This is the headline "drop a link in a PR → it folds into the wiki"
-  experience, deferred until we wire the agent up.
+- **[Soon] CI page-authoring via GitHub Copilot coding agent** *(wired up)*: an **Ingest a
+  source** issue form (`.github/ISSUE_TEMPLATE/ingest.yml`) is the trigger — fill it in and
+  assign the issue to Copilot. `copilot-setup-steps.yml` preinstalls the pipeline deps so the
+  agent can author pages immediately; AGENTS.md documents the CI-authoring flow. This is the
+  headline "drop a link → it folds into the wiki" experience. Human steps remaining: assign
+  issues to Copilot, and allowlist domains for URL/repo fetches (firewall).
 - **Scheduled AI-article feed** *(future)*: a scheduled source adapter that ingests the article
   feed and writes summarized pages (optionally opening a PR). Revisit alongside the Copilot-agent
   authoring step (needs a feed source + summarization-depth decision).

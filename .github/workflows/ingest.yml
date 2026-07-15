@@ -37,6 +37,8 @@ jobs:
           script: |
             const fs = require('fs');
             const body = fs.readFileSync('ingest-report.md', 'utf8')
+              + '\n\n> Assign this PR to **Copilot** to have the pages authored automatically. '
+              + 'See _CI authoring_ in `AGENTS.md`.'
               + '\n<!-- archivist-ingest-check -->';
             const { owner, repo } = context.repo;
             const issue_number = context.issue.number;

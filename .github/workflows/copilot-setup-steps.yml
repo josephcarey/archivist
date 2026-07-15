@@ -1,0 +1,39 @@
+name: "Copilot Setup Steps"
+
+# Prepares the environment for the GitHub Copilot coding agent so it can run the
+# archivist pipeline (ingest / build / publish) the moment it starts working.
+# Runs automatically when this file changes so you can validate it, and can be
+# run manually from the Actions tab.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  # The job MUST be called `copilot-setup-steps` or Copilot will not pick it up.
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Install pipeline dependencies
+        working-directory: scripts
+        run: npm ci
+
+      - name: Smoke-test the pipeline
+        run: node scripts/pipeline.js list

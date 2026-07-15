@@ -50,7 +50,7 @@ grouped by phase.
 
 - [x] PR ingest-check: Action detects new/changed sources on a PR and comments a report (`.github/workflows/ingest.yml` + `scripts/report.js`)
 - [x] **Authoring model decided: local/human `/ingest` for now** — the ingest-check flags what changed; a human runs `/ingest` in the CLI and pushes the pages. Zero new CI infra/cost (fits budget-grind).
-- [ ] **[Soon] CI page-authoring via GitHub Copilot coding agent** — trigger it on PRs to author + commit wiki pages from flagged sources (uses Copilot subscription; no separate API key). Roadmapped, not yet built.
+- [x] **CI page-authoring via GitHub Copilot coding agent** — wired up: `copilot-setup-steps.yml` prepares the env (Node + deps + smoke test), an **Ingest a source** issue form (`.github/ISSUE_TEMPLATE/ingest.yml`) is the trigger (assign to Copilot), and AGENTS.md documents the CI-authoring flow + firewall note. Human steps: assign issues to Copilot; allowlist domains for URL/repo fetches.
 - [ ] Scheduled AI-article feed adapter (ingest + summarize) — needs feed source + summarization depth decision (revisit alongside the Copilot-agent authoring step)
 - [ ] archivist-specific skills/agents (ingest agent, lint agent, PR-ingest persona)
 

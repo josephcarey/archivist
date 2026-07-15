@@ -1,0 +1,50 @@
+name: Ingest a source
+description: Ask the Copilot coding agent to fold a source into the wiki.
+title: "ingest: <source name>"
+labels: [ingest]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Point archivist at a source and it will author the wiki pages for you.
+
+        **How this works:** fill in the source below, open the issue, then
+        **assign it to Copilot** (Assignees → Copilot). The coding agent reads
+        `AGENTS.md`, runs the ingest pipeline, writes the pages, rebuilds the
+        derived artifacts, and opens a PR for your review.
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A URL, a git repo URL, or a path to a file already committed under `raw/`.
+      placeholder: https://example.com/article  •  https://github.com/owner/repo  •  raw/files/paper.pdf
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Source kind
+      options:
+        - Web page (URL)
+        - Git repository
+        - File in raw/ (PDF / text / markdown)
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / focus (optional)
+      description: Anything to emphasize, angles to cover, or how this relates to existing pages.
+      placeholder: "Focus on the cost/efficiency tradeoffs; cross-link with the existing X page."
+    validations:
+      required: false
+  - type: checkboxes
+    id: ack
+    attributes:
+      label: Before assigning to Copilot
+      options:
+        - label: If this is a **file**, I've committed it under `raw/` (the agent can only read what's in the repo).
+          required: false
+        - label: If this is a **URL/repo**, the domain is reachable from CI (see the firewall note in `AGENTS.md`).
+          required: false

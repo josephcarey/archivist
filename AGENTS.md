@@ -264,6 +264,39 @@ Maintenance commands for keeping the wiki in sync with changing sources:
 When a source comes back `changed`, re-run the normal `/ingest` flow for it and update
 the existing pages rather than creating duplicates.
 
+---
+
+### CI authoring (Copilot coding agent)
+
+Ingestion can run in CI: instead of running `/ingest` locally, assign the work to the
+**GitHub Copilot coding agent**, which authors the pages in its own environment and opens
+a PR for review.
+
+**How a human kicks it off**
+- Open a **"Ingest a source"** issue (`.github/ISSUE_TEMPLATE/ingest.yml`) with the URL /
+  repo / `raw/` file path, then **assign the issue to Copilot**. (You can also assign an
+  existing PR that adds a source under `raw/`.)
+
+**What the agent (you) does when assigned such an issue/PR**
+1. The environment is already prepared by `.github/workflows/copilot-setup-steps.yml`
+   (Node + `scripts/` deps installed, `pipeline list` smoke-tested) — you can run the
+   pipeline immediately.
+2. Run the normal **`/ingest`** operation above for the given source: fetch via
+   `node scripts/pipeline.js ingest <source>`, evaluate against `profile/rubric.md`
+   (neutral **facts only** — never hand-write a signal), and author the wiki page(s),
+   index, sidebar, and log entries.
+3. Rebuild derived artifacts so they're consistent: `node scripts/pipeline.js build`
+   (these are gitignored — do **not** commit them; CI regenerates them on deploy).
+4. Commit the authored pages and open a PR. Do not run `/publish`; the Pages workflow
+   handles deployment on merge.
+
+**Firewall note (URL / repo sources).** The coding agent runs behind a network firewall.
+Fetching an arbitrary web page or cloning a remote repo may be blocked unless the domain
+is on the allowlist. If a fetch fails in CI, either add the domain to the repo's Copilot
+firewall allowlist (Settings → Copilot → coding agent), or fetch the source locally and
+commit it under `raw/files/` so the agent can read it offline. Files already committed
+under `raw/` need no network access.
+
 The index is a catalog of every page in the wiki. Format:
 
 ```markdown

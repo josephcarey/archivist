@@ -24,6 +24,7 @@ apply it:
 - `profile/rubric.md` — how to evaluate a source: **neutral fact dimensions** recorded at ingest
 - `profile/lens.md` — the **values/stance** through which facts become judgments at build time
 - `profile/source-types.md` — recognized source kinds and how each is fetched/handled
+- `profile/feeds.md` — the domain feed list for scheduled discovery (a machine-readable JSON block)
 
 **Facts vs. values (important).** Ingest captures **neutral facts** — what a source objectively
 says, plus the neutral dimension scores from `rubric.md`. It must *not* decide adopt/trial/watch.
@@ -82,6 +83,7 @@ profile/           ← DOMAIN SEAM (what this instance is about — read before 
   rubric.md        ← neutral fact dimensions to score at ingest
   lens.md          ← values/stance; drives judgments at build time
   source-types.md  ← recognized source kinds + handling
+  feeds.md         ← scheduled-discovery feed list (JSON block)
 
 extensions/        ← PLUGGABLE CAPABILITIES (discovered by kind; additive)
   sources/         ← source adapters (ingest): url, repo, pdf
@@ -296,6 +298,29 @@ is on the allowlist. If a fetch fails in CI, either add the domain to the repo's
 firewall allowlist (Settings → Copilot → coding agent), or fetch the source locally and
 commit it under `raw/files/` so the agent can read it offline. Files already committed
 under `raw/` need no network access.
+
+---
+
+### Scheduled feed discovery
+
+A weekly GitHub Action (`.github/workflows/feed.yml`) polls the feeds configured in
+`profile/feeds.md`, finds new entries, appends the new URLs to the ingest queue
+(`raw/urls.md`), and opens/updates a `feed/discovery` PR. It is **discovery only** — it never
+authors wiki pages. That keeps the deterministic, free part (finding sources) separate from the
+token-spending part (authoring), which stays a gated `/ingest` step.
+
+- **`node scripts/feed.js [--dry-run]`** — poll the configured feeds and append new candidates
+  to the queue (dry-run reports without writing). Applies `filters` and the `maxPerRun` cap from
+  `profile/feeds.md`. Prints `FEED_NEW=<n>` to stderr.
+- **`node scripts/seed-catalog.js <catalog-url-or-file> [--write-feeds] [--no-discover]`** —
+  one-time import of a curated catalog: extracts article links into the queue **and**
+  autodiscovers each source's RSS/Atom feed (so writers/series become ongoing subscriptions).
+  Without `--write-feeds` it prints proposed `profile/feeds.md` additions; with it, appends them.
+- **`profile/feeds.md`** — the domain feed list (a machine-readable JSON block, like the lens).
+  Feeds are domain-specific, so they live in `profile/`. Edit this to add/remove sources.
+
+To turn a queued candidate into pages, run the normal `/ingest` flow (locally or by assigning
+the discovery PR to Copilot).
 
 The index is a catalog of every page in the wiki. Format:
 

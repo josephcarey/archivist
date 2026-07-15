@@ -51,7 +51,7 @@ grouped by phase.
 - [x] PR ingest-check: Action detects new/changed sources on a PR and comments a report (`.github/workflows/ingest.yml` + `scripts/report.js`)
 - [x] **Authoring model decided: local/human `/ingest` for now** — the ingest-check flags what changed; a human runs `/ingest` in the CLI and pushes the pages. Zero new CI infra/cost (fits budget-grind).
 - [x] **CI page-authoring via GitHub Copilot coding agent** — wired up: `copilot-setup-steps.yml` prepares the env (Node + deps + smoke test), an **Ingest a source** issue form (`.github/ISSUE_TEMPLATE/ingest.yml`) is the trigger (assign to Copilot), and AGENTS.md documents the CI-authoring flow + firewall note. Human steps: assign issues to Copilot; allowlist domains for URL/repo fetches.
-- [ ] Scheduled AI-article feed adapter (ingest + summarize) — needs feed source + summarization depth decision (revisit alongside the Copilot-agent authoring step)
+- [x] Scheduled feed discovery (discovery-only): `scripts/feed.js` polls `profile/feeds.md`, appends new candidates to the queue, `.github/workflows/feed.yml` opens a weekly PR. `scripts/seed-catalog.js` imports a curated catalog + autodiscovers each source's RSS feed. Seeded from meta-claude's catalog (43 articles, 8 blog feeds).
 - [ ] archivist-specific skills/agents (ingest agent, lint agent, PR-ingest persona)
 
 ## Phase 7 — MCP publisher (later)

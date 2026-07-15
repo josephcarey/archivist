@@ -44,4 +44,5 @@ credible, what's worth adopting, and what's worth watching.
 - `taxonomy.md` — default tags and categories for pages
 - `rubric.md` — how to evaluate a source on ingest (neutral fact dimensions)
 - `lens.md` — the values/stance through which facts are interpreted at build time
+- `feeds.md` — feeds polled by the scheduled discovery workflow (append to the queue only)
 - `source-types.md` — recognized source kinds and how each is handled

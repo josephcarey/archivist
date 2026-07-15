@@ -177,9 +177,13 @@ refresh/diff, monorepo package detection, Mermaid rendering.
   agent can author pages immediately; AGENTS.md documents the CI-authoring flow. This is the
   headline "drop a link → it folds into the wiki" experience. Human steps remaining: assign
   issues to Copilot, and allowlist domains for URL/repo fetches (firewall).
-- **Scheduled AI-article feed** *(future)*: a scheduled source adapter that ingests the article
-  feed and writes summarized pages (optionally opening a PR). Revisit alongside the Copilot-agent
-  authoring step (needs a feed source + summarization-depth decision).
+- **Scheduled AI-article feed** *(done — discovery only)*: `.github/workflows/feed.yml` polls the
+  feeds in `profile/feeds.md` weekly, appends new candidate URLs to the queue (`raw/urls.md`), and
+  opens a `feed/discovery` PR. `scripts/feed.js` is the poller; `scripts/seed-catalog.js` imports a
+  curated catalog and autodiscovers each source's RSS/Atom feed so writers/series become ongoing
+  subscriptions. Feeds were seeded from [meta-claude's](https://github.com/suzbot/meta-claude)
+  source catalog. Authoring the queued items stays a separate `/ingest` step (budget-grind: discovery
+  is free, authoring is gated).
 
 ### Phase 7 — MCP publisher (later)
 - An MCP server exposing `search` / `get_page` / `list_watchlist` over the digest, so local

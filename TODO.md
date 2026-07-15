@@ -3,7 +3,7 @@
 See `ROADMAP.md` for the vision and phased plan. This file tracks the concrete work items,
 grouped by phase.
 
-## Phase 1 — Profile seam
+## Phase 1 — Profile seam ✅
 
 - [x] Create `profile/` with `profile.md`, `taxonomy.md`, `rubric.md`, `source-types.md`
 - [x] Move domain-specific conventions out of `AGENTS.md` into `profile/`
@@ -11,38 +11,60 @@ grouped by phase.
 - [x] Author the AI-research profile content
 - [x] Slight rewrite of base files to reference the profile
 
-## Phase 2 — Ingest hardening
+## Phase 2 — Ingest hardening ✅
 
 - [x] Ingest hashing to detect changed sources
-- [x] `defuddle` (or similar) for clean sources — pull the full clean source in a predictable md format
+- [x] `defuddle` for clean sources — pull the full clean source in a predictable md format
 - [x] Command to grab new versions of each git repo and compare/diff the notes
 - [x] Handle monorepo packages gracefully (per-package notes)
 - [x] Repo-specific folder layout
-- [ ] Apply the profile evaluation rubric during ingest (engine convention wired in Phase 1; verify in practice)
 - [x] Add mermaid diagrams to generated pages
+- [ ] Apply the profile evaluation rubric during ingest — verify in practice on a real source
 
-## Phase 3 — PR automation
+## Phase 3 — Pipeline & extension foundation
 
-- [ ] Host the repo on GitHub with Actions enabled (prerequisite)
-- [ ] Action to detect new/changed sources on a PR
+- [x] Host the repo on GitHub with Actions available (prerequisite — done)
+- [ ] Formalize the ingest → build → publish pipeline (ingest = neutral facts / build = lensed judgment)
+- [ ] Define the extension manifest + discovery/registry and the three kinds
+- [ ] Retrofit `fetch-url` / `clone-repo` / `extract-pdf` as source adapters (no behavior change)
+- [ ] Reframe the current docsify setup as the built-in site publisher
+- [ ] Split `profile/rubric.md`: measurable dimensions (facts at ingest) vs weighting/signal (lens-driven)
+- [ ] Introduce `profile/lens.md` (single lens now; structured for `lens/*.md` multi-lens later)
+
+## Phase 4 — Builders: interpretation, watchlist, research directions, digest
+
+- [ ] Interpretation builder — facts × lens → derived outputs (re-runnable without re-ingesting)
+- [ ] Watchlist builder → `watchlist.json` + "Recommendations & Watchlist" page (adopt/trial/watch)
+- [ ] Research-directions builder → derived "Research Directions" page of lens-driven gaps
+- [ ] Ingest-time local gap hints (undocumented cited concepts)
+- [ ] Digest builder → `llms.txt` / `index.json` (machine-readable map for local agents)
+
+## Phase 5 — Site publisher → GitHub Pages
+
+- [ ] Deploy the docsify site to GitHub Pages (serve wiki + digest)
+- [ ] Keep local `serve` as the preview mode of the same publisher
+
+## Phase 6 — Automated ingestion
+
+- [ ] PR auto-ingest: Action detects new/changed sources on a PR and commits pages back
 - [ ] Agent runner to ingest + commit wiki pages back onto the PR branch
-- [ ] Skills and agents to keep this cleaner and use the best models
-- [ ] Mirror Dan's approach to avoiding reading full skills into context unless needed
+- [ ] Scheduled AI-article feed adapter (ingest + summarize)
+- [ ] archivist-specific skills/agents (ingest agent, lint agent, PR-ingest persona)
 
-## Phase 4 — Shared consumption
+## Phase 7 — MCP publisher (later)
 
-- [ ] Rearrange sidebar (wiki pages on top, technical docs below; log/guides placement)
-- [ ] Auto-maintained digest / "Things to Watch" page
-- [ ] Publish the docsify site as the shared read surface
-- [ ] Streamlined `/query` entry point over the whole wiki
+- [ ] MCP server exposing `search` / `get_page` / `list_watchlist` over the digest
+
+## Backlog & future (unsequenced)
+
+- [ ] Proactive source discovery — "research a subject → find sources → register → ingest" (consumes curated research directions)
+- [ ] Multi-lens support — per-audience stances (`lens/personal.md`, `lens/work.md`, `lens/studio.md`) over shared facts
+- [ ] Wiki information architecture — sidebar/organization rework (after transition)
+- [ ] Starter / seed source packs — bootstrap an instance from a defined source list (low priority)
+- [ ] Evaluate `rtk` (github.com/rtk-ai/rtk) for cheaper LLM tool calls (speculative)
 
 ## Open questions / raw notes
 
 - What makes a wiki a wiki? What am I looking for when I use it?
-- Roll a starter based on API — a series of sources you pull down (environments page,
-  release notes, confluence docs, repos, services list, guide diagrams).
-- Possible ingest pipeline shape:
-  - Research subjects (abstract — go find sources, register them in "sources to be read")
-  - Grab local copies of sources in cleaned-up md
-  - Process sources into wiki
-- Add rtk by default
+- Possible discovery-mode shape: research subjects (abstract) → grab clean local copies → process into wiki
+- Broader "use the best models / context economy / lazy skill loading" tooling lives at studio level, not this repo

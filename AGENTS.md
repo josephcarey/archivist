@@ -204,6 +204,17 @@ lens) so the derived pages stay in sync.
 
 ---
 
+### `/publish`
+
+Expose the site. The **docsify publisher** (`extensions/publishers/docsify`) serves the wiki:
+
+- **Preview locally:** `./start.sh` (or `node scripts/pipeline.js publish docsify serve`).
+- **Validate deploy-readiness:** `node scripts/pipeline.js publish` (checks `docs/`).
+- **Deploy:** pushing to `main` triggers `.github/workflows/pages.yml`, which runs the build
+  stage (so derived pages exist) and deploys `docs/` to **GitHub Pages** — the human-facing door.
+
+---
+
 ### `/query [question]`
 
 When the user asks a question:

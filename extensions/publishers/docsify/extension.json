@@ -1,0 +1,12 @@
+{
+  "name": "docsify",
+  "kind": "publisher",
+  "entry": "index.js",
+  "description": "The docsify site: serve the wiki locally for preview and deploy it to GitHub Pages.",
+  "enabled": true,
+  "order": 10,
+  "config": {
+    "docsDir": "docs",
+    "deploy": "github-pages"
+  }
+}

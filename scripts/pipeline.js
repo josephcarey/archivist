@@ -50,7 +50,7 @@ async function build() {
   }
 }
 
-async function publish(name) {
+async function publish(name, args) {
   let publishers = load({ kind: 'publisher' });
   if (name) publishers = publishers.filter(p => p.name === name);
   if (publishers.length === 0) {
@@ -61,7 +61,7 @@ async function publish(name) {
   }
   for (const p of publishers) {
     console.error(`[archivist] publish → ${p.name}`);
-    await p.module.publish({});
+    await p.module.publish({ args: args || [] });
   }
 }
 
@@ -88,7 +88,7 @@ async function main() {
   switch (stage) {
     case 'ingest': return ingest(rest[0]);
     case 'build': return build();
-    case 'publish': return publish(rest[0]);
+    case 'publish': return publish(rest[0], rest.slice(1));
     case 'list': return list();
     default:
       console.error('Usage: node scripts/pipeline.js <ingest|build|publish|list> [args]');

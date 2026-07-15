@@ -41,8 +41,10 @@ grouped by phase.
 
 ## Phase 5 — Site publisher → GitHub Pages
 
-- [ ] Deploy the docsify site to GitHub Pages (serve wiki + digest)
-- [ ] Keep local `serve` as the preview mode of the same publisher
+- [x] Docsify reframed as a publisher extension (`extensions/publishers/docsify`)
+- [x] GitHub Pages deploy workflow (`.github/workflows/pages.yml`) — builds derived artifacts then deploys `docs/`
+- [x] Keep local `serve` as the preview mode of the same publisher (`./start.sh` / `publish docsify serve`)
+- [ ] One-time: enable Pages (Settings → Pages → Source: GitHub Actions) — human step
 
 ## Phase 6 — Automated ingestion
 

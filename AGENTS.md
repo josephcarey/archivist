@@ -255,6 +255,11 @@ Maintenance commands for keeping the wiki in sync with changing sources:
 - **`node scripts/refresh-repos.js [repo]`** — pulls each cloned repo, and for any
   whose HEAD moved, prints the commit log and changed files so you can update the
   affected wiki pages. Re-ingest the repos it flags as changed.
+- **`node scripts/report.js`** — emits a markdown "sources needing ingest" report (new/changed
+  files/repos + not-yet-ingested URLs from `raw/urls.md`). Used by the **ingest-check** GitHub
+  Action (`.github/workflows/ingest.yml`), which comments the report on any PR that touches
+  `raw/**`. This is the deterministic half of automated ingestion — it flags *what* needs
+  ingesting; authoring the wiki pages is still an `/ingest` (agent) step.
 
 When a source comes back `changed`, re-run the normal `/ingest` flow for it and update
 the existing pages rather than creating duplicates.

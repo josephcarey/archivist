@@ -48,9 +48,9 @@ grouped by phase.
 
 ## Phase 6 — Automated ingestion
 
-- [ ] PR auto-ingest: Action detects new/changed sources on a PR and commits pages back
-- [ ] Agent runner to ingest + commit wiki pages back onto the PR branch
-- [ ] Scheduled AI-article feed adapter (ingest + summarize)
+- [x] PR ingest-check: Action detects new/changed sources on a PR and comments a report (`.github/workflows/ingest.yml` + `scripts/report.js`)
+- [ ] **Agent runner to author + commit wiki pages back onto the PR branch — needs product input** (which runner/model, secrets, cost controls)
+- [ ] Scheduled AI-article feed adapter (ingest + summarize) — needs feed source + summarization depth decision
 - [ ] archivist-specific skills/agents (ingest agent, lint agent, PR-ingest persona)
 
 ## Phase 7 — MCP publisher (later)

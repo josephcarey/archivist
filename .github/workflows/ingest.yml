@@ -1,0 +1,49 @@
+name: Archivist ingest check
+
+on:
+  pull_request:
+    paths:
+      - 'raw/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  ingest-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install script dependencies
+        working-directory: scripts
+        run: npm ci || npm install
+
+      - name: Generate ingest report
+        id: report
+        run: |
+          node scripts/report.js > ingest-report.md 2> ingest-report.err || true
+          echo "needs=$(grep -oE 'NEEDS_INGEST=[0-9]+' ingest-report.err | cut -d= -f2)" >> "$GITHUB_OUTPUT"
+
+      - name: Comment the report on the PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('ingest-report.md', 'utf8')
+              + '\n<!-- archivist-ingest-check -->';
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const { data: comments } = await github.rest.issues.listComments({ owner, repo, issue_number });
+            const existing = comments.find(c => c.body && c.body.includes('<!-- archivist-ingest-check -->'));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }

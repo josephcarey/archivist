@@ -8,3 +8,5 @@
 
 - **Analyses**
   - [Fermentation](wiki/fermentation.md)
+  - [Recommendations & Watchlist](wiki/recommendations-watchlist.md)
+  - [Research Directions](wiki/research-directions.md)

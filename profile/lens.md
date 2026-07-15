@@ -55,6 +55,36 @@ The **same facts** could yield a different signal under a different lens (e.g. a
 lens would upgrade marginal-gain frontier tools that this lens holds at `watch`). That is the
 point of keeping facts and lens apart.
 
+## Machine-readable weighting
+
+The interpretation builder reads the block below to turn neutral dimension scores (1–5, from
+`rubric.md`) into a signal. This is the operational form of the stance above: change the numbers,
+re-run `node scripts/pipeline.js build`, and every judgment is recomputed from the same facts —
+no re-ingest. Weights sum to 1.0; `score` is their weighted average on the 1–5 scale.
+
+```json
+{
+  "stance": "budget-grind",
+  "weights": {
+    "novelty": 0.10,
+    "credibility": 0.15,
+    "relevance": 0.20,
+    "maturity": 0.25,
+    "cost": 0.30
+  },
+  "thresholds": {
+    "adopt": 3.5,
+    "trial": 3.0,
+    "watch": 2.5
+  },
+  "guards": {
+    "adoptMinMaturity": 4,
+    "adoptMinCost": 3,
+    "trialMinRelevance": 3
+  }
+}
+```
+
 ## How the lens suggests research directions
 
 Interpretation also emits **research directions** — lens-driven gaps in what we know. Examples

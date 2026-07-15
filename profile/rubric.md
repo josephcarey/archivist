@@ -58,4 +58,6 @@ Notes:
 - Be honest and specific in the notes; a low score with a clear reason is more useful than a
   generous one.
 - If a source cites a technique/tool that isn't yet documented here, note it — it becomes a
-  local *research-direction* hint the interpretation build can pick up.
+  local *research-direction* hint the interpretation build can pick up. Mark it inline with an
+  HTML comment `<!-- gap: short description -->` (or a `## Gaps` section) so the
+  `research-directions` builder collects it automatically.

@@ -1,0 +1,8 @@
+{
+  "name": "research-directions",
+  "kind": "builder",
+  "entry": "index.js",
+  "description": "Surface lens-driven gaps: explicit gap hints + thin-coverage tags → Research Directions page.",
+  "enabled": true,
+  "order": 30
+}

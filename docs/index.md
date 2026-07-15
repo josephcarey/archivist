@@ -24,3 +24,5 @@ A catalog of every page in this wiki. Updated automatically on every ingest.
 
 | Page | Summary | Date |
 |------|---------|------|
+| [Recommendations & Watchlist](wiki/recommendations-watchlist.md) | Generated judgments (adopt/trial/watch) from facts × the lens | 2026-07-15 |
+| [Research Directions](wiki/research-directions.md) | Generated lens-driven gaps — what's missing that would be valuable | 2026-07-15 |

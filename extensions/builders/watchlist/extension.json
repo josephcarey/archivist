@@ -1,0 +1,8 @@
+{
+  "name": "watchlist",
+  "kind": "builder",
+  "entry": "index.js",
+  "description": "Interpret neutral facts through profile/lens.md into signals (watchlist.json + Recommendations page).",
+  "enabled": true,
+  "order": 20
+}

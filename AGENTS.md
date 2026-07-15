@@ -186,6 +186,24 @@ A single ingest may touch 5–15 wiki pages. That is normal and expected.
 
 ---
 
+### `/build`
+
+Regenerate the derived artifacts from the current wiki facts and lens. Run
+`node scripts/pipeline.js build` (or invoke the builders you need). This produces:
+
+- `docs/watchlist.json` + `docs/wiki/recommendations-watchlist.md` — the **judgments**
+  (adopt/trial/watch) from facts × `profile/lens.md`.
+- `docs/wiki/research-directions.md` — the derived **gaps** (what's missing).
+- `docs/llms.txt` + `docs/index.json` — the agent-facing **digest**.
+
+These files are **generated — never hand-edit them**; re-run the build to refresh. They are
+**gitignored** (regenerated locally for preview and by CI before the site deploys), so they will
+not appear in commits. Because judgments are derived, changing `profile/lens.md` and rebuilding
+re-scores everything **without re-ingesting**. Run a build after an ingest (or after editing the
+lens) so the derived pages stay in sync.
+
+---
+
 ### `/query [question]`
 
 When the user asks a question:

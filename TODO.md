@@ -33,11 +33,11 @@ grouped by phase.
 
 ## Phase 4 — Builders: interpretation, watchlist, research directions, digest
 
-- [ ] Interpretation builder — facts × lens → derived outputs (re-runnable without re-ingesting)
-- [ ] Watchlist builder → `watchlist.json` + "Recommendations & Watchlist" page (adopt/trial/watch)
-- [ ] Research-directions builder → derived "Research Directions" page of lens-driven gaps
-- [ ] Ingest-time local gap hints (undocumented cited concepts)
-- [ ] Digest builder → `llms.txt` / `index.json` (machine-readable map for local agents)
+- [x] Interpretation builder — facts × lens → derived outputs (re-runnable without re-ingesting)
+- [x] Watchlist builder → `watchlist.json` + "Recommendations & Watchlist" page (adopt/trial/watch)
+- [x] Research-directions builder → derived "Research Directions" page of lens-driven gaps
+- [x] Ingest-time local gap hints (undocumented cited concepts)
+- [x] Digest builder → `llms.txt` / `index.json` (machine-readable map for local agents)
 
 ## Phase 5 — Site publisher → GitHub Pages
 

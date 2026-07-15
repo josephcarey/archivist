@@ -1,0 +1,8 @@
+{
+  "name": "digest",
+  "kind": "builder",
+  "entry": "index.js",
+  "description": "Compile a machine-readable map of the wiki (llms.txt + index.json) for local agents.",
+  "enabled": true,
+  "order": 10
+}

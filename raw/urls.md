@@ -7,6 +7,32 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 ## Queue
 
 <!-- Add URLs below this line, one per line -->
+- [Quoting Sam Altman](https://simonwillison.net/2026/Jul/20/sam-altman/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [AI Mania Is Eviscerating Global Decision-Making](https://simonwillison.net/2026/Jul/19/ai-mania/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Claude Code uses Bun written in Rust now](https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [SQLite Query Explainer](https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Claude make Fable 5 permanent](https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [nascheme/quixote](https://simonwillison.net/2026/Jul/18/quixote/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Quoting Kimi K3](https://simonwillison.net/2026/Jul/17/kimi-k3/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [LLM cliché highlighter](https://simonwillison.net/2026/Jul/17/llm-cliche-highlighter/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Spot birds not golf](https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Firefox in WebAssembly](https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Kimi K3, and what we can still learn from the pelican benchmark](https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Quoting Thibault Sottiaux](https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Inkling: Our open-weights model](https://simonwillison.net/2026/Jul/16/inkling/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Mermaid to ASCII art (mermaid-ascii)](https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Quoting Linus Torvalds](https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Mermaid to Unicode box art (grok-mermaid)](https://simonwillison.net/2026/Jul/16/grok-mermaid/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [xai-org/grok-build, now open source](https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [How I tricked Claude into leaking your deepest, darkest secrets](https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Quoting GitHub Changelog](https://simonwillison.net/2026/Jul/14/github-changeling/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [simonw/pedalican](https://simonwillison.net/2026/Jul/14/pedalican/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [lobste.rs is now running on SQLite](https://simonwillison.net/2026/Jul/14/lobsters-sqlite/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Quoting Armin Ronacher](https://simonwillison.net/2026/Jul/14/armin-ronacher/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [datasette 1.0a37](https://simonwillison.net/2026/Jul/14/datasette/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [Using uvx in GitHub Actions in a cache-friendly way](https://simonwillison.net/2026/Jul/14/uvx-github-actions-cache/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+- [DOOMQL](https://simonwillison.net/2026/Jul/13/doomql/#atom-everything) <!-- feed: Simon Willison 2026-07-20 -->
+
 - [Adam Tornhill: How Long Should a Function Be? (And Why It's the Wrong Question to Ask)](https://adamtornhill.substack.com/p/how-long-should-a-function-be-and)
 - [Fowler: Structured-Prompt-Driven Development (SPDD)](https://martinfowler.com/articles/structured-prompt-driven/)
 - [Daniel Schleicher: Removing Ambiguity with Spec-Driven Development](https://www.danielschleicher.com/software/engineering,/ai,/spec-driven/development/2026/01/04/removing-ambiguity-with-spec-driven-development.html)

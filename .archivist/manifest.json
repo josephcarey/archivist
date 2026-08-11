@@ -1,4 +1,12 @@
 {
   "version": 1,
-  "sources": {}
+  "sources": {
+    "url:https://martinfowler.com/articles/llm-and-dsls.html": {
+      "type": "url",
+      "hash": "a3311ab0a90662253f476ff1484e7dbd63219908ff1bc78f9dd0b59717faa808",
+      "title": "DSLs Enable Reliable Use of LLMs",
+      "ingestedAt": "2026-08-11T16:40:54.368Z",
+      "lastSeenAt": "2026-08-11T16:40:54.368Z"
+    }
+  }
 }

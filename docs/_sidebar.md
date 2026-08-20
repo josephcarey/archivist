@@ -17,5 +17,6 @@
 - **Analyses**
   - [Fermentation](wiki/fermentation.md)
   - [Local Guardrails with System One Models](wiki/local-guardrails-with-system-one.md)
+  - [QA Checklist: Reviewing AI-Written Code](wiki/ai-code-review-qa-checklist.md)
   - [Recommendations & Watchlist](wiki/recommendations-watchlist.md)
   - [Research Directions](wiki/research-directions.md)

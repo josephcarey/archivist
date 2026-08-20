@@ -24,3 +24,9 @@ An append-only record of every ingest, query, and lint pass.
 ## [2026-09-16] query | Can Jev / System One models act as boundaries for other local AI agents?
 - Answer filed as: wiki/local-guardrails-with-system-one.md
 - Summary: Filed an analysis of using structured-decision models as agent guardrails on-prem — local "Jev-lite" via constrained decoding, the calibration caveat, and a hybrid escalate-to-Jev design.
+
+## [2026-08-20] ingest | AI-Native Code Review (AgentField + PR-AF)
+- Source: https://agentfield.ai/blog/ai-native-code-review ; https://agentfield.ai/blog/what-is-harness-orchestration ; https://github.com/Agent-Field/pr-af/blob/main/docs/ARCHITECTURE.md
+- Pages created: wiki/ai-code-review-qa-checklist.md
+- Pages updated: index.md, _sidebar.md, raw/urls.md (queued 3 source URLs)
+- Summary: Filed a tool-agnostic QA checklist (analysis) for reviewing AI-written code; verified source claims via pipeline ingest and corrected PR-AF review timing to 60-70 min.

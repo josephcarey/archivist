@@ -30,6 +30,7 @@ A catalog of every page in this wiki. Updated automatically on every ingest.
 
 | Page | Summary | Date |
 |------|---------|------|
+| [QA Checklist: Reviewing AI-Written Code](wiki/ai-code-review-qa-checklist.md) | Tool-agnostic end-of-task gate for reviewing AI-written code, from AgentField + PR-AF | 2026-08-20 |
 | [Recommendations & Watchlist](wiki/recommendations-watchlist.md) | Generated judgments (adopt/trial/watch) from facts × the lens | 2026-07-15 |
 | [Research Directions](wiki/research-directions.md) | Generated lens-driven gaps — what's missing that would be valuable | 2026-07-15 |
 | [Local Guardrails with System One Models](wiki/local-guardrails-with-system-one.md) | Using fast structured-decision models as boundaries around agents on-prem, with a hybrid escalation to Jev | 2026-09-16 |

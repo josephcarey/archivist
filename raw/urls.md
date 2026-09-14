@@ -7,6 +7,32 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 ## Queue
 
 <!-- Add URLs below this line, one per line -->
+- [Quoting Laurie Voss](https://simonwillison.net/2026/Sep/14/laurie-voss/) <!-- feed: Simon Willison 2026-09-14 -->
+- [commit-rewriter 0.1](https://simonwillison.net/2026/Sep/14/commit-rewriter/) <!-- feed: Simon Willison 2026-09-14 -->
+- [shot-scraper 1.12](https://simonwillison.net/2026/Sep/13/shot-scraper/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Generating running routes with GPT-6 Astra and ChatGPT Work](https://simonwillison.net/2026/Sep/12/astra-running-routes/) <!-- feed: Simon Willison 2026-09-14 -->
+- [California Brown Pelican](https://simonwillison.net/2026/Sep/12/sighting-399708714/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Quoting Paul Ford](https://simonwillison.net/2026/Sep/12/paul-ford/) <!-- feed: Simon Willison 2026-09-14 -->
+- [OpenAI agents attacked RubyGems back in May](https://simonwillison.net/2026/Sep/12/openai-agents-rubygems/) <!-- feed: Simon Willison 2026-09-14 -->
+- [So you want to use OpenRouter?](https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Quoting Boris Cherny](https://simonwillison.net/2026/Sep/11/boris-cherny/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Feeling sad about AI](https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Quoting huggingface.co/security.txt](https://simonwillison.net/2026/Sep/11/hugging-face-security/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Soft-deprecating re.match()](https://simonwillison.net/2026/Sep/11/soft-deprecating-re-match/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Don't sleep on wrapture](https://simonwillison.net/2026/Sep/11/wrapture/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Datasette 1.0a39 and 0.65.4 security releases](https://simonwillison.net/2026/Sep/11/datasette-security/) <!-- feed: Simon Willison 2026-09-14 -->
+- [datasette-publish-fly 1.4](https://simonwillison.net/2026/Sep/11/datasette-publish-fly/) <!-- feed: Simon Willison 2026-09-14 -->
+- [github-to-sqlite 2.9.1](https://simonwillison.net/2026/Sep/11/github-to-sqlite/) <!-- feed: Simon Willison 2026-09-14 -->
+- [datasette 0.65.4](https://simonwillison.net/2026/Sep/11/datasette/) <!-- feed: Simon Willison 2026-09-14 -->
+- [datasette 1.0a39](https://simonwillison.net/2026/Sep/11/datasette-2/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Any Nix package, live in your browser](https://simonwillison.net/2026/Sep/10/trynix/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Native is now the future of mobile at Shopify](https://simonwillison.net/2026/Sep/10/shopify-react-native/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Quoting Calif Research](https://simonwillison.net/2026/Sep/10/calif-research/) <!-- feed: Simon Willison 2026-09-14 -->
+- [.blend URL Viewer](https://simonwillison.net/2026/Sep/9/blender-viewer/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Quoting Terence Tao](https://simonwillison.net/2026/Sep/9/terence-tao/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Some thoughts on the Navier–Stokes Millennium Prize Problem](https://simonwillison.net/2026/Sep/8/on-navier-stokes/) <!-- feed: Simon Willison 2026-09-14 -->
+- [Introducing ChatGPT Images 2.5](https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/) <!-- feed: Simon Willison 2026-09-14 -->
+
 - [Adam Tornhill: How Long Should a Function Be? (And Why It's the Wrong Question to Ask)](https://adamtornhill.substack.com/p/how-long-should-a-function-be-and)
 - [Fowler: Structured-Prompt-Driven Development (SPDD)](https://martinfowler.com/articles/structured-prompt-driven/)
 - [Daniel Schleicher: Removing Ambiguity with Spec-Driven Development](https://www.danielschleicher.com/software/engineering,/ai,/spec-driven/development/2026/01/04/removing-ambiguity-with-spec-driven-development.html)

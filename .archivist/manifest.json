@@ -1,4 +1,40 @@
 {
   "version": 1,
-  "sources": {}
+  "sources": {
+    "url:https://typesafe.ai/blog/introducing-system-one-models-and-jev": {
+      "type": "url",
+      "hash": "ea651ea48362b2b821ff6788df8af422dbca394189cc84e3a0a9908a8b1c89b5",
+      "title": "Introducing System One Models & Jev - TypeSafe AI Blog",
+      "ingestedAt": "2026-09-16T15:26:05.883Z",
+      "lastSeenAt": "2026-09-16T15:26:05.883Z"
+    },
+    "url:https://www.seangoedecke.com/jev-means-structured-output-is-interesting-again/": {
+      "type": "url",
+      "hash": "81400939e9be862bc72e927e454d084a4227df667fa2bd591b3f949708a4fdb7",
+      "title": "Jev means structured output is interesting again",
+      "ingestedAt": "2026-09-16T15:26:16.190Z",
+      "lastSeenAt": "2026-09-16T15:26:16.190Z"
+    },
+    "url:https://docs.typesafe.ai/": {
+      "type": "url",
+      "hash": "cd3790b2cf1ae7b8eb123f16f7eeb2184f608c8829e0003d821e7823042a5456",
+      "title": "Introduction",
+      "ingestedAt": "2026-09-16T15:26:17.097Z",
+      "lastSeenAt": "2026-09-16T15:26:17.097Z"
+    },
+    "url:https://docs.typesafe.ai/concepts/system-one": {
+      "type": "url",
+      "hash": "707d7649e359dbe8b1c5311a63c9bc4b0c000fcededd20f9e7f52e0f980f3208",
+      "title": "System One",
+      "ingestedAt": "2026-09-16T15:26:27.026Z",
+      "lastSeenAt": "2026-09-16T15:26:27.026Z"
+    },
+    "url:https://docs.typesafe.ai/confidence": {
+      "type": "url",
+      "hash": "dadda6f807adb7ef4bcc42a36e24095f22b06a81434452ba2efb2d503a84621c",
+      "title": "Confidence",
+      "ingestedAt": "2026-09-16T15:26:29.042Z",
+      "lastSeenAt": "2026-09-16T15:26:29.042Z"
+    }
+  }
 }

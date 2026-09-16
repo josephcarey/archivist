@@ -16,5 +16,6 @@
 
 - **Analyses**
   - [Fermentation](wiki/fermentation.md)
+  - [Local Guardrails with System One Models](wiki/local-guardrails-with-system-one.md)
   - [Recommendations & Watchlist](wiki/recommendations-watchlist.md)
   - [Research Directions](wiki/research-directions.md)

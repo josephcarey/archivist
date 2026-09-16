@@ -20,3 +20,7 @@ An append-only record of every ingest, query, and lint pass.
 - Issues found: 3 (all pre-existing template seed content, not from this ingest)
 - Issues fixed: 0
 - Summary: New Jev pages passed all checks (no dead links, no orphans, frontmatter/taxonomy/evaluations complete); flagged pre-existing gaps in example-source.md and fermentation.md.
+
+## [2026-09-16] query | Can Jev / System One models act as boundaries for other local AI agents?
+- Answer filed as: wiki/local-guardrails-with-system-one.md
+- Summary: Filed an analysis of using structured-decision models as agent guardrails on-prem — local "Jev-lite" via constrained decoding, the calibration caveat, and a hybrid escalate-to-Jev design.

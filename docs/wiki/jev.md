@@ -81,6 +81,7 @@ that without test-time compute this class likely caps near non-reasoning-LLM int
 - [Structured Output](wiki/structured-output.md)
 - [Introducing System One Models & Jev (TypeSafe AI)](wiki/jev-launch-typesafe.md)
 - [Jev means structured output is interesting again](wiki/jev-structured-output-goedecke.md)
+- [Local Guardrails with System One Models](wiki/local-guardrails-with-system-one.md)
 
 ## Sources
 

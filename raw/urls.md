@@ -7,6 +7,32 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 ## Queue
 
 <!-- Add URLs below this line, one per line -->
+- [Quoting @joedaroo](https://simonwillison.net/2026/Sep/28/joedaroo/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Quoting Muse AI Agent](https://simonwillison.net/2026/Sep/28/muse-ai-agent/) <!-- feed: Simon Willison 2026-09-28 -->
+- [2026 in LLMs (so far)](https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/) <!-- feed: Simon Willison 2026-09-28 -->
+- [S3 Is the Future, S3 Is the Past](https://simonwillison.net/2026/Sep/27/hn-49871741/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Bluesky reply bot checker](https://simonwillison.net/2026/Sep/27/bluesky-bot-check/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Kākāpō Party](https://simonwillison.net/2026/Sep/26/kakapo-party/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Quoting John Gruber](https://simonwillison.net/2026/Sep/25/john-gruber/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Northern Gannet, Great Blue Heron, California Brown Pelican](https://simonwillison.net/2026/Sep/25/sighting-403293902/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Note on 24th September 2026](https://simonwillison.net/2026/Sep/24/harder/) <!-- feed: Simon Willison 2026-09-28 -->
+- [commit-rewriter 0.2](https://simonwillison.net/2026/Sep/24/commit-rewriter/) <!-- feed: Simon Willison 2026-09-28 -->
+- [datasette 1.0a41](https://simonwillison.net/2026/Sep/24/datasette/) <!-- feed: Simon Willison 2026-09-28 -->
+- [We just shipped support for the ugliest part of HTTP: Vary](https://simonwillison.net/2026/Sep/23/hn-49823961/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Gemini 3.8 TTS Playground](https://simonwillison.net/2026/Sep/23/gemini-tts-playground/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Shadow roots, explained with live examples](https://simonwillison.net/2026/Sep/23/shadow-roots/) <!-- feed: Simon Willison 2026-09-28 -->
+- [SF October 14th: A Birds of a Feather Session on Agentic Engineering](https://simonwillison.net/2026/Sep/23/bof-agentic-engineering/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Claude Opus 5.5, GPT-6 Sol, GPT-6 Luna, and a new price war](https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/) <!-- feed: Simon Willison 2026-09-28 -->
+- [llm 0.36](https://simonwillison.net/2026/Sep/22/llm/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Quoting @therealcornpop](https://simonwillison.net/2026/Sep/22/therealcornpop/) <!-- feed: Simon Willison 2026-09-28 -->
+- [llm-anthropic 0.29](https://simonwillison.net/2026/Sep/22/llm-anthropic/) <!-- feed: Simon Willison 2026-09-28 -->
+- [llm-typesafe 0.1a0](https://simonwillison.net/2026/Sep/22/llm-typesafe/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Jev introduces a new shape of LLM - System One, aka Decision Models](https://simonwillison.net/2026/Sep/21/jev/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Cloudflare Python Workers are now generally available](https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/) <!-- feed: Simon Willison 2026-09-28 -->
+- [Quoting voxium](https://simonwillison.net/2026/Sep/20/voxium/) <!-- feed: Simon Willison 2026-09-28 -->
+- [MCP was always a bad idea?](https://simonwillison.net/2026/Sep/20/hn-49779718/) <!-- feed: Simon Willison 2026-09-28 -->
+- [llm-keys-ui 0.1](https://simonwillison.net/2026/Sep/20/llm-keys-ui/) <!-- feed: Simon Willison 2026-09-28 -->
+
 - [Adam Tornhill: How Long Should a Function Be? (And Why It's the Wrong Question to Ask)](https://adamtornhill.substack.com/p/how-long-should-a-function-be-and)
 - [Fowler: Structured-Prompt-Driven Development (SPDD)](https://martinfowler.com/articles/structured-prompt-driven/)
 - [Daniel Schleicher: Removing Ambiguity with Spec-Driven Development](https://www.danielschleicher.com/software/engineering,/ai,/spec-driven/development/2026/01/04/removing-ambiguity-with-spec-driven-development.html)

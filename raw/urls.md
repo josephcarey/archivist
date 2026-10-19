@@ -50,4 +50,7 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 - [Claude Code: What's New](https://code.claude.com/docs/en/whats-new)
 - [Claude Code: Changelog](https://code.claude.com/docs/en/changelog)
 - [Claude Platform Release Notes](https://platform.claude.com/docs/en/release-notes/overview)
+- [AgentField: AI-Native Code Review](https://agentfield.ai/blog/ai-native-code-review)
+- [AgentField: What Is Harness Orchestration](https://agentfield.ai/blog/what-is-harness-orchestration)
+- [PR-AF: Architecture](https://github.com/Agent-Field/pr-af/blob/main/docs/ARCHITECTURE.md)
 

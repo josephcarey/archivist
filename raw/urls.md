@@ -7,6 +7,32 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 ## Queue
 
 <!-- Add URLs below this line, one per line -->
+- [Seam Cutter](https://simonwillison.net/2026/Oct/25/seam-cutter/) <!-- feed: Simon Willison 2026-10-26 -->
+- [battledrones v14: Compass Rose, a four player map](https://simonwillison.net/2026/Oct/24/battledrones/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Quick Study](https://simonwillison.net/2026/Oct/23/quick-study-painter/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Introducing Kimi K3.1 Pro](https://simonwillison.net/2026/Oct/23/kimi-k31-pro/) <!-- feed: Simon Willison 2026-10-26 -->
+- [DE STAAT - FREEDOM (Official Music Video)](https://simonwillison.net/2026/Oct/22/de-staat-freedom/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Donating Agent Skills to the Agentic AI Foundation](https://simonwillison.net/2026/Oct/22/donating-agent-skills/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Quoting Armin Ronacher](https://simonwillison.net/2026/Oct/22/armin-ronacher/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Today's PHP Security Release, and How We're Strengthening PHP Security](https://simonwillison.net/2026/Oct/21/php-security-release/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Panache — RTS Belle Époque pour mobile](https://simonwillison.net/2026/Oct/21/panache/) <!-- feed: Simon Willison 2026-10-26 -->
+- [eMudhra Intermediate CA Compromise](https://simonwillison.net/2026/Oct/20/emudhra-certificates/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Battle Drones - a vibe coded RTS with audio-based multiplayer](https://simonwillison.net/2026/Oct/20/battledrones/) <!-- feed: Simon Willison 2026-10-26 -->
+- [My obituary for programming](https://simonwillison.net/2026/Oct/19/my-obituary-for-programming/) <!-- feed: Simon Willison 2026-10-26 -->
+- [llm-tools-datasette 0.1.1](https://simonwillison.net/2026/Oct/18/llm-tools-datasette/) <!-- feed: Simon Willison 2026-10-26 -->
+- [llm-echo 0.5](https://simonwillison.net/2026/Oct/18/llm-echo/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Inline rendering with document​.currentScript](https://simonwillison.net/2026/Oct/17/document-currentscript/) <!-- feed: Simon Willison 2026-10-26 -->
+- [web-edit 0.1a2](https://simonwillison.net/2026/Oct/17/web-edit/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Quoting Addy Osmani, Morgan Westlee Lunt, and Qing Wang](https://simonwillison.net/2026/Oct/16/code-review/) <!-- feed: Simon Willison 2026-10-26 -->
+- [sparqlite: SPARQL 1.1 inside SQLite, written in Rust](https://simonwillison.net/2026/Oct/16/sqlite-sparql-rust/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Chirp Pong](https://simonwillison.net/2026/Oct/15/chirp-pong/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Anthropic tells investors quarterly revenue up nearly 50% to $16.8bn ahead of IPO](https://simonwillison.net/2026/Oct/15/anthropic-tells-investors/) <!-- feed: Simon Willison 2026-10-26 -->
+- [LaTeX renderer](https://simonwillison.net/2026/Oct/15/latex/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Tree Appreciator](https://simonwillison.net/2026/Oct/14/tree-appreciator/) <!-- feed: Simon Willison 2026-10-26 -->
+- [AI is mass decompiling games. That's both awesome and scary.](https://simonwillison.net/2026/Oct/14/ai-is-mass-decompiling-games/) <!-- feed: Simon Willison 2026-10-26 -->
+- [Redesigning source control at Anthropic](https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/) <!-- feed: Simon Willison 2026-10-26 -->
+- [llm-gemini 0.35](https://simonwillison.net/2026/Oct/13/llm-gemini/) <!-- feed: Simon Willison 2026-10-26 -->
+
 - [Adam Tornhill: How Long Should a Function Be? (And Why It's the Wrong Question to Ask)](https://adamtornhill.substack.com/p/how-long-should-a-function-be-and)
 - [Fowler: Structured-Prompt-Driven Development (SPDD)](https://martinfowler.com/articles/structured-prompt-driven/)
 - [Daniel Schleicher: Removing Ambiguity with Spec-Driven Development](https://www.danielschleicher.com/software/engineering,/ai,/spec-driven/development/2026/01/04/removing-ambiguity-with-spec-driven-development.html)

@@ -7,6 +7,32 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 ## Queue
 
 <!-- Add URLs below this line, one per line -->
+- [The Web Is More Than Enough, by Paul Ford](https://simonwillison.net/2026/Nov/9/hn-50421091/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Hide your slop PR descriptions behind <details><summary>](https://simonwillison.net/2026/Nov/9/details-summary/) <!-- feed: Simon Willison 2026-11-09 -->
+- [parse_number() as a SQLite extension: C vs Rust](https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/) <!-- feed: Simon Willison 2026-11-09 -->
+- [datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages](https://simonwillison.net/2026/Nov/7/link-rel-next/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Terry Pratchett's Study](https://simonwillison.net/2026/Nov/7/hn-50407316/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Quoting Nilay Patel](https://simonwillison.net/2026/Nov/6/nilay-patel/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Quoting Paul Ford](https://simonwillison.net/2026/Nov/5/paul-ford/) <!-- feed: Simon Willison 2026-11-09 -->
+- [datasette-llm 0.1a10](https://simonwillison.net/2026/Nov/4/datasette-llm/) <!-- feed: Simon Willison 2026-11-09 -->
+- [datasette-apps 0.3a0](https://simonwillison.net/2026/Nov/4/datasette-apps/) <!-- feed: Simon Willison 2026-11-09 -->
+- [datasette-agent 0.5a0](https://simonwillison.net/2026/Nov/3/datasette-agent/) <!-- feed: Simon Willison 2026-11-09 -->
+- [llm 0.37.1](https://simonwillison.net/2026/Nov/3/llm/) <!-- feed: Simon Willison 2026-11-09 -->
+- [AI is destroying my CS degree](https://simonwillison.net/2026/Nov/3/hn-50354278/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Qwen 3.8 27B on my laptop can interpret model weights, too](https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/) <!-- feed: Simon Willison 2026-11-09 -->
+- [I discovered a sound that leaks your exact location (and it's everywhere) - YouTube](https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/) <!-- feed: Simon Willison 2026-11-09 -->
+- [October sponsors-only newsletter](https://simonwillison.net/2026/Nov/3/october-newsletter/) <!-- feed: Simon Willison 2026-11-09 -->
+- [llm 0.37](https://simonwillison.net/2026/Nov/2/llm/) <!-- feed: Simon Willison 2026-11-09 -->
+- [The U.S. Census Bureau and “Super Intelligence”](https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/) <!-- feed: Simon Willison 2026-11-09 -->
+- [If in doubt, delete the uv.lock file](https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Quoting Kyle Kingsbury](https://simonwillison.net/2026/Nov/1/kyle-kingsbury/) <!-- feed: Simon Willison 2026-11-09 -->
+- [How We Took Over ChatGPT Accounts](https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/) <!-- feed: Simon Willison 2026-11-09 -->
+- [datasette-llm 0.1a9](https://simonwillison.net/2026/Oct/31/datasette-llm/) <!-- feed: Simon Willison 2026-11-09 -->
+- [dbreunig/nesformer](https://simonwillison.net/2026/Oct/30/nesformer/) <!-- feed: Simon Willison 2026-11-09 -->
+- [API credits benefit for eligible ChatGPT subscriptions](https://simonwillison.net/2026/Oct/29/api-credits/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Building a multiplayer game world with autonomous Fable-class models](https://simonwillison.net/2026/Oct/29/how-i-built-the-most-ai-pilled-company-in-the-world/) <!-- feed: Simon Willison 2026-11-09 -->
+- [Quoting Ben Hylak](https://simonwillison.net/2026/Oct/29/ben-hylak/) <!-- feed: Simon Willison 2026-11-09 -->
+
 - [Adam Tornhill: How Long Should a Function Be? (And Why It's the Wrong Question to Ask)](https://adamtornhill.substack.com/p/how-long-should-a-function-be-and)
 - [Fowler: Structured-Prompt-Driven Development (SPDD)](https://martinfowler.com/articles/structured-prompt-driven/)
 - [Daniel Schleicher: Removing Ambiguity with Spec-Driven Development](https://www.danielschleicher.com/software/engineering,/ai,/spec-driven/development/2026/01/04/removing-ambiguity-with-spec-driven-development.html)

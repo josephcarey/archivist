@@ -7,6 +7,32 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 ## Queue
 
 <!-- Add URLs below this line, one per line -->
+- [datasette-maplibre 0.1a0](https://simonwillison.net/2026/Nov/15/datasette-maplibre/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette 1.0a43](https://simonwillison.net/2026/Nov/15/datasette/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette 0.65.6](https://simonwillison.net/2026/Nov/15/datasette-2/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette-apps 0.4a0](https://simonwillison.net/2026/Nov/15/datasette-apps/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette-agent 0.6a0](https://simonwillison.net/2026/Nov/15/datasette-agent/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette-llm 0.1a11](https://simonwillison.net/2026/Nov/14/datasette-llm/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette-vega 0.7](https://simonwillison.net/2026/Nov/14/datasette-vega/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette-cluster-map 0.19](https://simonwillison.net/2026/Nov/13/datasette-cluster-map/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette-leaflet 0.3](https://simonwillison.net/2026/Nov/13/datasette-leaflet/) <!-- feed: Simon Willison 2026-11-16 -->
+- [llm-gemini 0.37](https://simonwillison.net/2026/Nov/12/llm-gemini/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Gemini Decisions API](https://simonwillison.net/2026/Nov/11/gemini-decisions-api/) <!-- feed: Simon Willison 2026-11-16 -->
+- [aws-emulator](https://simonwillison.net/2026/Nov/11/aws-emulator/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Browse tools.simonwillison.net by tag](https://simonwillison.net/2026/Nov/11/tools-tags/) <!-- feed: Simon Willison 2026-11-16 -->
+- [llm 0.37.2](https://simonwillison.net/2026/Nov/11/llm/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Anthropic's IPO roadshow video](https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/) <!-- feed: Simon Willison 2026-11-16 -->
+- [llm-gemini 0.36](https://simonwillison.net/2026/Nov/10/llm-gemini/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Introducing Our Smallest, Most Efficient Model: Muse Ember](https://simonwillison.net/2026/Nov/10/muse-ember/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Quoting Prompting Claude Fable 5.2](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Yonkers Rises](https://simonwillison.net/2026/Nov/10/yonkers-rises/) <!-- feed: Simon Willison 2026-11-16 -->
+- [llm-anthropic 0.31](https://simonwillison.net/2026/Nov/9/llm-anthropic/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Locating the source of a mysterious beep with Claude](https://simonwillison.net/2026/Nov/9/mysterious-beeps/) <!-- feed: Simon Willison 2026-11-16 -->
+- [The Web Is More Than Enough, by Paul Ford](https://simonwillison.net/2026/Nov/9/hn-50421091/) <!-- feed: Simon Willison 2026-11-16 -->
+- [Hide your slop PR descriptions behind <details><summary>](https://simonwillison.net/2026/Nov/9/details-summary/) <!-- feed: Simon Willison 2026-11-16 -->
+- [parse_number() as a SQLite extension: C vs Rust](https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/) <!-- feed: Simon Willison 2026-11-16 -->
+- [datasette #3046: Don't serve link: rel=next HTTP headers to Firefox for HTML pages](https://simonwillison.net/2026/Nov/7/link-rel-next/) <!-- feed: Simon Willison 2026-11-16 -->
+
 - [Adam Tornhill: How Long Should a Function Be? (And Why It's the Wrong Question to Ask)](https://adamtornhill.substack.com/p/how-long-should-a-function-be-and)
 - [Fowler: Structured-Prompt-Driven Development (SPDD)](https://martinfowler.com/articles/structured-prompt-driven/)
 - [Daniel Schleicher: Removing Ambiguity with Spec-Driven Development](https://www.danielschleicher.com/software/engineering,/ai,/spec-driven/development/2026/01/04/removing-ambiguity-with-spec-driven-development.html)

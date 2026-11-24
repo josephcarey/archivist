@@ -7,6 +7,32 @@ You can also pass a URL directly: `/ingest https://example.com/article`
 ## Queue
 
 <!-- Add URLs below this line, one per line -->
+- [GLM-5.4: Toward Generalized Coding with Our First Loop Transformer](https://simonwillison.net/2026/Nov/23/glm-54/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Ladybird's first alpha release](https://simonwillison.net/2026/Nov/23/ladybird/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette-charts 0.1a0](https://simonwillison.net/2026/Nov/23/datasette-charts/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Select Styling Specimens](https://simonwillison.net/2026/Nov/22/select-styling/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Muru](https://simonwillison.net/2026/Nov/21/muru/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Quoting Ravi Vakil](https://simonwillison.net/2026/Nov/20/ravi-vakil/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Quoting Levent Alpöge](https://simonwillison.net/2026/Nov/20/levent-alpoge/) <!-- feed: Simon Willison 2026-11-24 -->
+- [llm-gemini 0.38.1](https://simonwillison.net/2026/Nov/20/llm-gemini/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Token fraud is here and it’s BAD (YouTube)](https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/) <!-- feed: Simon Willison 2026-11-24 -->
+- [PostgreSQL 19 Released](https://simonwillison.net/2026/Nov/19/postgresql-19/) <!-- feed: Simon Willison 2026-11-24 -->
+- [llm-gemini 0.38](https://simonwillison.net/2026/Nov/18/llm-gemini/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette-arrows 0.1a0](https://simonwillison.net/2026/Nov/18/datasette-arrows/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Quoting Daniel Stenberg](https://simonwillison.net/2026/Nov/18/daniel-stenberg/) <!-- feed: Simon Willison 2026-11-24 -->
+- [The PSF end-of-year fundraiser](https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/) <!-- feed: Simon Willison 2026-11-24 -->
+- [External sandboxes for coding agents](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/) <!-- feed: Simon Willison 2026-11-24 -->
+- [GPT‑6.2 Astra and GPT‑6.2 Sol](https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Running the full server-side Datasette Python app in the browser with service workers and Pyodide](https://simonwillison.net/2026/Nov/17/datasette-lite/) <!-- feed: Simon Willison 2026-11-24 -->
+- [Quoting Go Proverbs](https://simonwillison.net/2026/Nov/17/go-proverbs/) <!-- feed: Simon Willison 2026-11-24 -->
+- [llm 0.37.3](https://simonwillison.net/2026/Nov/16/llm/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette-maplibre 0.1a0](https://simonwillison.net/2026/Nov/15/datasette-maplibre/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette 1.0a43](https://simonwillison.net/2026/Nov/15/datasette/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette 0.65.6](https://simonwillison.net/2026/Nov/15/datasette-2/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette-apps 0.4a0](https://simonwillison.net/2026/Nov/15/datasette-apps/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette-agent 0.6a0](https://simonwillison.net/2026/Nov/15/datasette-agent/) <!-- feed: Simon Willison 2026-11-24 -->
+- [datasette-llm 0.1a11](https://simonwillison.net/2026/Nov/14/datasette-llm/) <!-- feed: Simon Willison 2026-11-24 -->
+
 - [Adam Tornhill: How Long Should a Function Be? (And Why It's the Wrong Question to Ask)](https://adamtornhill.substack.com/p/how-long-should-a-function-be-and)
 - [Fowler: Structured-Prompt-Driven Development (SPDD)](https://martinfowler.com/articles/structured-prompt-driven/)
 - [Daniel Schleicher: Removing Ambiguity with Spec-Driven Development](https://www.danielschleicher.com/software/engineering,/ai,/spec-driven/development/2026/01/04/removing-ambiguity-with-spec-driven-development.html)
